@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAY App - Signup Flow Test Report</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .header-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 0;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .test-summary {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .flow-section {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .flow-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        .assertion-item {
+            padding: 15px;
+            border-left: 4px solid #667eea;
+            background: #f8f9fa;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .status-badge {
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        .status-pass {
+            background-color: #28a745;
+            color: white;
+        }
+        .status-fail {
+            background-color: #dc3545;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-section">
+        <div class="container">
+            <h1 class="text-center">PAY App - Complete Signup Flow Test Report</h1>
+            <p class="text-center mb-0">Automated Test Execution Report</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Test Summary -->
+        <div class="test-summary">
+            <h2>Test Execution Summary</h2>
+            <hr>
+            <div class="row">
+                <div class="col-md-6">
+                    <p><strong>Test Flow:</strong> Complete Signup Flow</p>
+                    <p><strong>App ID:</strong> com.tap_pay</p>
+                    <p><strong>Duration:</strong> 2m 11s</p>
+                </div>
+                <div class="col-md-6">
+                    <p><strong>Overall Status:</strong> <span class="badge bg-success">PASSED</span></p>
+                    <p><strong>Total Assertions:</strong> 5</p>
+                    <p><strong>Framework:</strong> Maestro</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Name Flow -->
+        <div class="flow-section">
+            <div class="flow-header">
+                📝 Name Entry Flow
+            </div>
+            <div class="assertion-item">
+                <div>
+                    <strong>Assertion:</strong> Verify "What's your name?" is visible
+                </div>
+                <span class="status-badge status-pass">PASS</span>
+            </div>
+            <div class="assertion-item">
+                <div>
+                    <strong>Action:</strong> Enter name "Rabbiyaa"
+                </div>
+                <span class="status-badge status-pass">PASS</span>
+            </div>
+        </div>
+
+        <!-- Mobile Number Flow -->
+        <div class="flow-section">
+            <div class="flow-header">
+                📱 Mobile Number Entry Flow
+            </div>
+            <div class="assertion-item">
+                <div>
+                    <strong>Assertion:</strong> Verify "Enter Your Mobile Number?" is visible
+                </div>
+                <span class="status-badge status-pass">PASS</span>
+            </div>
+            <div class="assertion-item">
+                <div>
+                    <strong>Action:</strong> Enter mobile number "03205263174"
+                </div>
+                <span class="status-badge status-pass">PASS</span>
+            </div>
+        </div>
+
+        <!-- OTP Flow -->
+        <div class="flow-section">
+            <div class="flow-header">
+                📨 OTP Permission & Auto-fill Flow
+            </div>
+            <div class="assertion-item">
+                <div>
+                    <strong>Assertion:</strong> Verify "Allow PAY to read the message below and enter the code?" is visible
+                </div>
+                <span class="status-badge status-pass">PASS</span>
+            </div>
+            <div class="assertion-item">
+                <div>
+                    <strong>Action:</strong> Allow permission and wait for OTP auto-fill
+                </div>
+                <span class="status-badge status-pass">PASS</span>
+            </div>
+        </div>
+
+        <!-- PIN Entry Flow -->
+        <div class="flow-section">
+            <div class="flow-header">
+                🔐 PIN Entry Flow
+            </div>
+            <div class="assertion-item">
+                <div>
+                    <strong>Assertion:</strong> Verify "Enter PIN" is visible
+                </div>
+                <span class="status-badge status-pass">PASS</span>
+            </div>
+            <div class="assertion-item">
+                <div>
+                    <strong>Action:</strong> Enter PIN (1-2-1-2)
+                </div>
+                <span class="status-badge status-pass">PASS</span>
+            </div>
+        </div>
+
+        <!-- PIN Re-entry Flow -->
+        <div class="flow-section">
+            <div class="flow-header">
+                🔐 PIN Re-entry Flow
+            </div>
+            <div class="assertion-item">
+                <div>
+                    <strong>Assertion:</strong> Verify "Re-enter PIN" is visible
+                </div>
+                <span class="status-badge status-pass">PASS</span>
+            </div>
+            <div class="assertion-item">
+                <div>
+                    <strong>Action:</strong> Re-enter PIN (1-2-1-2)
+                </div>
+                <span class="status-badge status-pass">PASS</span>
+            </div>
+            <div class="assertion-item">
+                <div>
+                    <strong>Action:</strong> Complete registration
+                </div>
+                <span class="status-badge status-pass">PASS</span>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="text-center mt-4 mb-4">
+            <p class="text-muted">PAY App Automation Testing | Framework: Maestro | Soft Assertions: Enabled</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
