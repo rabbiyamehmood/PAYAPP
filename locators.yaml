@@ -1,0 +1,31 @@
+# UI Locators Configuration
+# Central location for all UI element coordinates and selectors
+# Update coordinates here when UI changes - flows will automatically use new values
+
+# Login Screen Locators
+LOGIN_PIN_INPUT_FIELD: "11%,55%"
+
+# Signup Screen Locators
+SIGNUP_CHECKBOX_1: "8%,81%"
+SIGNUP_CONTINUE_BUTTON_1: "50%,90%"
+SIGNUP_NAME_INPUT_FIELD: "51%,43%"
+SIGNUP_NAME_NEXT_BUTTON: "50%,63%"
+SIGNUP_MOBILE_NEXT_BUTTON: "50%,63%"
+
+# PIN Screen Locators
+PIN_INPUT_FIELD_ENTER: "17%,41%"
+PIN_INPUT_FIELD_REENTER: "17%,54%"
+
+# Registration Complete Locators
+REGISTRATION_BACK_BUTTON: "Back"
+REGISTRATION_FINAL_BUTTON: "50%,72%"
+
+# Terms & Conditions Locators
+TERMS_CHECKBOX: "8%,81%"
+TERMS_CONTINUE_BUTTON: "50%,90%"
+
+# Fingerprint Screen Locators
+FINGERPRINT_SKIP_BUTTON: "67%,58%"
+
+# Common Elements
+MOBILE_NUMBER_PLACEHOLDER: "03*********"

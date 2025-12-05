@@ -1,0 +1,42 @@
+appId: com.tap_pay
+env:
+  SIGNUP_NAME_INPUT_FIELD: "51%,43%"
+  SIGNUP_NAME_NEXT_BUTTON: "50%,63%"
+  SIGNUP_MOBILE_NEXT_BUTTON: "50%,63%"
+  MOBILE_NUMBER_PLACEHOLDER: "03*********"
+  OTP_TIMEOUT: 10000
+---
+# Signup Page Object
+# Contains all elements and actions related to signup screens
+# UI Coordinates: See .maestro/locators.yaml for coordinate definitions
+
+# Name Input Section
+- runFlow:
+    when:
+      visible: "What's your name?"
+    commands:
+      - tapOn:
+          point: ${SIGNUP_NAME_INPUT_FIELD}
+      - inputText: ${NAME}
+      - tapOn:
+          point: ${SIGNUP_NAME_NEXT_BUTTON}
+
+# Mobile Number Input Section
+- runFlow:
+    when:
+      visible: "Enter Your Mobile Number?"
+    commands:
+      - tapOn: ${MOBILE_NUMBER_PLACEHOLDER}
+      - inputText: ${MOBILE_NUMBER}
+      - tapOn: Back
+      - tapOn:
+          point: ${SIGNUP_MOBILE_NEXT_BUTTON}
+
+# OTP Permission Handler
+- runFlow:
+    when:
+      visible: "Allow PAY to read the message below and enter the code?"
+    commands:
+      - tapOn: Allow
+      - waitForAnimationToEnd:
+          timeout: ${OTP_TIMEOUT}
