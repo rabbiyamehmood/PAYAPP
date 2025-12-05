@@ -1,0 +1,17 @@
+# Maestro Configuration File
+# This file controls global settings for all test flows
+
+# ULTRA FAST SPEED MODE - Maximum speed for all operations
+defaultInputDelay: 0ms        # Instant typing - no delay between characters
+defaultTapDelay: 0ms          # No delay after taps
+tapDelay: 0ms                 # No delay between consecutive taps (PIN entry)
+
+# Scroll settings - Fastest possible scrolling
+scrollDuration: 10ms          # Ultra fast scrolls (10x faster than default)
+
+# Wait settings
+defaultTimeout: 15000         # Timeout for assertions in milliseconds (15 seconds)
+assertionTimeout: 5000        # Faster assertion checks (5 seconds)
+
+# Animation settings
+disableAnimations: true       # Skip all UI animations for maximum speed

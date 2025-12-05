@@ -1,0 +1,41 @@
+appId: com.tap_pay
+# All UI coordinates defined here - update in one place!
+env:
+  # UI Locators (from locators.yaml)
+  LOGIN_PIN_INPUT_FIELD: "11%,55%"
+  TERMS_SCROLL_COUNT: 38
+  TERMS_CHECKBOX: "8%,81%"
+  TERMS_CONTINUE_BUTTON: "50%,90%"
+  FINGERPRINT_SKIP_BUTTON: "67%,58%"
+---
+# First Login Flow - Using Page Object Model with Centralized Locators
+# UPDATE COORDINATES: Change env variables above to update UI element positions
+
+# Launch App
+- tapOn: PAY
+
+# Enter PIN
+- assertVisible: Enter your Pin
+- tapOn:
+    point: ${LOGIN_PIN_INPUT_FIELD}
+- tapOn: "1"
+- tapOn: "2"
+- tapOn: "1"
+- tapOn: "2"
+
+# Accept Terms & Conditions
+- assertVisible: Read Before Proceeding
+- repeat:
+    times: ${TERMS_SCROLL_COUNT}
+    commands:
+      - scroll
+- assertVisible: I have read and agree to the Terms and Conditions
+- tapOn:
+    point: ${TERMS_CHECKBOX}
+- tapOn:
+    point: ${TERMS_CONTINUE_BUTTON}
+
+# Setup Fingerprint
+- assertVisible: Enable Fingerprint
+- tapOn:
+    point: ${FINGERPRINT_SKIP_BUTTON}

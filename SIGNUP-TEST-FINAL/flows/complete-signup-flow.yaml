@@ -29,9 +29,7 @@ env:
     point: ${SIGNUP_CONTINUE_BUTTON_1}
 
 # Enter Name
-- assertVisible: 
-    text: What's your name?
-    optional: true
+- assertVisible: What's your name?
 - tapOn:
     point: ${SIGNUP_NAME_INPUT_FIELD}
 - inputText: ${NAME}
@@ -39,9 +37,7 @@ env:
     point: ${SIGNUP_NAME_NEXT_BUTTON}
 
 # Enter Mobile Number
-- assertVisible: 
-    text: Enter Your Mobile Number?
-    optional: true
+- assertVisible: Enter Your Mobile Number?
 - tapOn: ${MOBILE_NUMBER_PLACEHOLDER}
 - inputText: ${MOBILE_NUMBER}
 - tapOn: Back
@@ -49,17 +45,13 @@ env:
     point: ${SIGNUP_MOBILE_NEXT_BUTTON}
 
 # Handle OTP Permission
-- assertVisible: 
-    text: "Allow PAY to read the message below and enter the code?"
-    optional: true
+- assertVisible: "Allow PAY to read the message below and enter the code?"
 - tapOn: Allow
 # Wait for OTP to auto-fill (app reads SMS and enters OTP automatically)
 - waitForAnimationToEnd
 
 # Enter PIN
-- assertVisible: 
-    text: Enter PIN
-    optional: true
+- assertVisible: Enter PIN
 - tapOn:
     point: ${PIN_INPUT_FIELD_ENTER}
 - tapOn: "1"
@@ -68,9 +60,7 @@ env:
 - tapOn: "2"
 
 # Re-enter PIN
-- assertVisible: 
-    text: Re-enter PIN
-    optional: true
+- assertVisible: Re-enter PIN
 - tapOn:
     point: ${PIN_INPUT_FIELD_REENTER}
 - tapOn: "1"
@@ -82,3 +72,4 @@ env:
 - tapOn: Back
 - tapOn:
     point: ${REGISTRATION_FINAL_BUTTON}
+- assertVisible: "Congratulations"
