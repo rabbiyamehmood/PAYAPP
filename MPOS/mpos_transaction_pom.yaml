@@ -1,0 +1,22 @@
+appId: com.tap_pay
+env:
+  PIN: "1122"
+  DIGIT_1: "4"
+  DIGIT_2: "0"
+  DIGIT_3: "0"
+  DIGIT_4: "0"
+---
+# MPOS Transaction Test - Using POM Structure
+# This is the main test that orchestrates all sub-flows
+
+# Step 1: Login
+- runFlow: flows/login.yaml
+
+# Step 2: Connect to MPOS Device
+- runFlow: flows/mpos_device_connection.yaml
+
+# Step 3: Enter Transaction Amount
+- runFlow: flows/enter_amount.yaml
+
+# Step 4: Process Payment
+- runFlow: flows/payment_processing.yaml

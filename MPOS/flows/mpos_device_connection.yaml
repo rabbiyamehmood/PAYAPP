@@ -1,0 +1,7 @@
+appId: com.tap_pay
+---
+# MPOS Device Connection Flow
+- extendedWaitUntil:
+    visible: "MPOS Payment"
+    timeout: 15000
+- assertVisible: "Enter Amount"

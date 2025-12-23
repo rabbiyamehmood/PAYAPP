@@ -1,0 +1,9 @@
+appId: com.tap_pay
+---
+# Enter Transaction Amount Flow
+# Parameters: AMOUNT (as individual digits)
+- tapOn: "${DIGIT_1}"
+- tapOn: "${DIGIT_2}"
+- tapOn: "${DIGIT_3}"
+- tapOn: "${DIGIT_4}"
+- tapOn: "CONFIRM"

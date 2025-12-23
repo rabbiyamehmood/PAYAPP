@@ -1,0 +1,9 @@
+appId: com.tap_pay
+---
+# Payment Processing Flow
+- assertVisible: "Please Insert or Tap Card"
+- extendedWaitUntil:
+    visible: "Transaction Successful"
+    timeout: 30000
+- tapOn:
+    point: "59%,81%"  # Continue/OK button

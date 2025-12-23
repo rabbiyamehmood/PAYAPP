@@ -1,0 +1,24 @@
+# Test Data Configuration
+# Update these values as needed
+
+# Login credentials
+PIN: "1122"
+
+# Transaction amounts (as individual digits)
+AMOUNT_2000:
+  DIGIT_1: "2"
+  DIGIT_2: "0"
+  DIGIT_3: "0"
+  DIGIT_4: "0"
+
+AMOUNT_3500:
+  DIGIT_1: "3"
+  DIGIT_2: "5"
+  DIGIT_3: "0"
+  DIGIT_4: "0"
+
+AMOUNT_1000:
+  DIGIT_1: "1"
+  DIGIT_2: "0"
+  DIGIT_3: "0"
+  DIGIT_4: "0"

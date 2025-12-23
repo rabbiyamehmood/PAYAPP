@@ -1,0 +1,25 @@
+appId: com.tap_pay
+---
+- tapOn: "PAY"
+- assertVisible: "Enter your Pin"
+- tapOn:
+    point: "11%,55%"
+- inputText: "1122"
+- assertVisible: "Enable Fingerprint"
+- tapOn:
+    point: "67%,58%"
+- tapOn:
+    point: "17%,58%"
+- extendedWaitUntil:
+    visible: "MPOS Payment"
+    timeout: 15000
+- assertVisible: "Enter Amount"
+- tapOn: "2"
+- tapOn: "0"
+- tapOn: "0"
+- tapOn: "0"
+- tapOn: "CONFIRM"
+- assertVisible: "Please Insert or Tap Card"
+- assertVisible: "Transaction Successful"
+- tapOn:
+    point: "59%,81%"
