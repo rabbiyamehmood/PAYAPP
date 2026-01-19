@@ -1,0 +1,52 @@
+appId: com.tap_pay
+
+---
+# SoftPOS Onboarding Flow - Page Object Model
+
+# Initial setup
+- tapOn:
+    point: 17%,69%
+- tapOn: OK
+
+# Shop Details Page
+- runFlow:
+    file: pages/shop-details.yaml
+    env:
+      shopName: bossy borgor shop
+      revenue: "50000"
+      storeLocation: Karachi
+      storeAddress: "Shop #123 Tariq road"
+
+# Personal Details Page
+- runFlow:
+    file: pages/personal-details.yaml
+    env:
+      email: bossyborger@gmail.com
+      cnic: "4550051452572"
+      motherName: mother
+      fatherName: father
+      placeOfBirth: Karachi
+      birthYear: "2000"
+      birthDay: "31"
+      issueYear: "2020"
+      issueDay: "19"
+
+# Photo Capture Page
+- runFlow: pages/photo-capture.yaml
+
+# Attach Files Page
+- runFlow: pages/attach-files.yaml
+
+# Bank Details Page
+- runFlow:
+    file: pages/bank-details.yaml
+    env:
+      bankName: "Faysal Bank Limited"
+      iban: PK08FAYS0110101001298755
+      accountTitle: "Bossy Borger"
+
+# Final Submission Page
+- runFlow:
+    file: pages/final-submission.yaml
+    env:
+      transactionAmount: Rs 25 - 50k

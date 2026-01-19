@@ -1,0 +1,51 @@
+appId: com.tap_pay
+---
+
+# Bank Details Page Object
+
+# Bank Details Section
+- assertVisible: "Select Bank Name"
+
+# Select Bank Name - Tap on the bank selection field
+- tapOn:
+    point: 89%,31%
+- waitForAnimationToEnd:
+    timeout: 2000
+
+# Scroll down to reach Faysal Bank Limited (position 16) - 3 gentle scrolls
+- swipe:
+    start: 50%, 65%
+    end: 50%, 45%
+    duration: 400
+- waitForAnimationToEnd:
+    timeout: 800
+
+- swipe:
+    start: 50%, 65%
+    end: 50%, 45%
+    duration: 400
+- waitForAnimationToEnd:
+    timeout: 800
+
+#- swipe:
+#    start: 50%, 65%
+#    end: 50%, 45%
+#    duration: 400
+#- waitForAnimationToEnd:
+#    timeout: 1000
+
+# Select Faysal Bank Limited using text selector
+- tapOn: Faysal Bank Limited
+- waitForAnimationToEnd:
+    timeout: 2500
+- tapOn:
+    point: 50%,42%
+- inputText: ${iban}
+- tapOn: Back
+
+# Account Title
+- assertVisible: Enter Account Title
+- tapOn:
+    point: 50%,53%
+- inputText: ${accountTitle}
+- tapOn: Back

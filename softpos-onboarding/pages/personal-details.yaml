@@ -1,0 +1,85 @@
+appId: com.tap_pay
+---
+
+# Personal Details Page Object
+
+# Email Address
+- assertVisible: Email Address
+- tapOn:
+    point: 50%,29%
+- inputText: ${email}
+
+# Valid CNIC
+- assertVisible: Valid CNIC
+- tapOn:
+    point: 50%,40%
+- inputText: ${cnic}
+
+# Mother's Maiden Name
+- assertVisible: Mother's Maiden Name
+- tapOn:
+    point: 50%,51%
+- inputText: ${motherName}
+
+# Father's Maiden Name
+- assertVisible: Father's Maiden Name
+- tapOn:
+    point: 51%,62%
+- inputText: ${fatherName}
+- tapOn: Back
+
+# Place of Birth
+- assertVisible: Place of Birth
+- tapOn:
+    point: 89%,72%
+- tapOn: ${placeOfBirth}
+
+# Date Of Birth
+- assertVisible: Date Of Birth
+- tapOn:
+    point: 89%,82%
+- tapOn: "2026"
+- scrollUntilVisible:
+    element:
+      id: android:id/text1
+      text: ${birthYear}
+    direction: UP
+- tapOn:
+    id: android:id/text1
+    text: ${birthYear}
+- tapOn: ${birthDay}
+- tapOn: OK
+
+# CNIC Date of Issue
+- tapOn:
+    point: 89%,91%
+- tapOn: "2026"
+- scrollUntilVisible:
+    element:
+      id: android:id/text1
+      text: ${issueYear}
+    direction: UP
+- tapOn:
+    id: android:id/text1
+    text: ${issueYear}
+- tapOn: Previous month
+- tapOn: ${issueDay}
+- tapOn: OK
+
+# Wait for date picker to close
+- waitForAnimationToEnd:
+    timeout: 2000
+
+# Scroll down to see submit button
+- swipe:
+    start: 50%, 70%
+    end: 50%, 30%
+    duration: 500
+
+# Wait for scroll to complete
+- waitForAnimationToEnd:
+    timeout: 1000
+
+# Tap submit/continue button
+- tapOn:
+    point: 50%,89%

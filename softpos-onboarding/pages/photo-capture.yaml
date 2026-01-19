@@ -1,0 +1,37 @@
+appId: com.tap_pay
+---
+
+# Photo Capture Page Object
+
+# Step 9: Photo Capture Flow (Manual Process)
+# Wait for selfie capture screen to load
+- waitForAnimationToEnd:
+    timeout: 3000
+
+# Wait for user to manually capture selfie (face detection auto-capture)
+- waitForAnimationToEnd:
+    timeout: 15000
+
+# Wait for CNIC front capture screen to load
+- waitForAnimationToEnd:
+    timeout: 3000
+
+# Wait for user to manually capture CNIC front
+- waitForAnimationToEnd:
+    timeout: 15000
+
+# Wait for CNIC back capture screen to load
+- waitForAnimationToEnd:
+    timeout: 3000
+
+# Wait for user to manually capture CNIC back
+- waitForAnimationToEnd:
+    timeout: 15000
+
+# Wait for photos to process
+- waitForAnimationToEnd:
+    timeout: 2000
+
+# Tap the blue Next/Continue button
+- tapOn:
+    point: 50%,75%

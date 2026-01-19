@@ -1,0 +1,32 @@
+appId: com.tap_pay
+
+---
+# Debug Flow - Step by Step Testing
+
+# Step 1: Launch App
+- launchApp
+- waitForAnimationToEnd:
+    timeout: 5000
+
+# Step 2: Take screenshot to see initial screen
+- takeScreenshot: screenshots/01-initial-screen.png
+
+# Step 3: Tap on first button
+- tapOn:
+    point: 17%,69%
+- waitForAnimationToEnd:
+    timeout: 3000
+- takeScreenshot: screenshots/02-after-first-tap.png
+
+# Step 4: Tap on center (OK button area)
+- tapOn:
+    point: 50%,50%
+- waitForAnimationToEnd:
+    timeout: 3000
+- takeScreenshot: screenshots/03-after-ok-tap.png
+
+# Step 5: Check if Shop Name is visible
+- assertVisible: 
+    text: "Shop Name"
+    optional: true
+- takeScreenshot: screenshots/04-shop-details-screen.png

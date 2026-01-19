@@ -1,0 +1,28 @@
+appId: com.tap_pay
+---
+
+# Attach Files Page Object
+
+# Upload Signature Image
+- assertVisible: Attach Files
+- assertVisible: Upload Your Signature Image
+- tapOn:
+    point: 20%,49%
+- tapOn:
+    id: com.android.camera:id/shutter_button
+- tapOn:
+    id: com.android.camera:id/done_button_bg
+
+# Upload Shop Location
+- tapOn: Upload your Shop Location
+- tapOn:
+    point: 20%,82%
+- tapOn:
+    id: com.android.camera:id/shutter_button
+- tapOn:
+    id: com.android.camera:id/done_button_bg
+
+# Submit
+- scroll
+- tapOn: Next
+

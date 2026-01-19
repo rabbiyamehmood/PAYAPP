@@ -1,0 +1,52 @@
+appId: com.tap_pay
+---
+
+# Shop Details Page Object
+
+# Shop Name
+- assertVisible: Shop Name
+- tapOn:
+    point: 51%,30%
+- inputText: ${shopName}
+
+# Legal Entity
+- assertVisible: Legal Entity
+- tapOn:
+    point: 50%,41%
+- tapOn:
+    point: 89%,41%
+- tapOn:
+    point: 50%,46%
+
+# Expected Revenue per month
+- assertVisible: Expected Revenue per month
+- tapOn:
+    point: 51%,52%
+- inputText: ${revenue}
+- tapOn: Back
+
+# Nature Of Business
+- assertVisible: Nature Of Business
+- tapOn:
+    point: 89%,63%
+- tapOn: |-
+    Fast food restaurants-
+    5814
+
+# Store Location
+- assertVisible: Store Location
+- tapOn:
+    point: 89%,74%
+- tapOn: ${storeLocation}
+
+# Store Address
+- assertVisible: Store Address
+- tapOn:
+    point: 50%,85%
+- inputText: ${storeAddress}
+- tapOn: Back
+- tapOn:
+    point: 50%,89%
+- scroll
+- tapOn:
+    point: 50%,89%

@@ -1,0 +1,21 @@
+appId: com.tap_pay
+---
+
+# Final Submission Page Object
+
+# Transaction Amount and Request
+- tapOn:
+    point: 50%,88%
+- tapOn: ${transactionAmount}
+- tapOn: Request a SoftPOS
+
+# Terms and Conditions
+- assertVisible: I have read and agree to the Terms and Conditions
+- tapOn:
+    point: 8%,79%
+- tapOn:
+    point: 50%,91%
+
+# OTP and Completion
+- assertVisible: Enter your OTP
+- assertVisible: Congratulations
