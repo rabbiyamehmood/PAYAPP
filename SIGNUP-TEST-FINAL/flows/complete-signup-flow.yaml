@@ -3,7 +3,7 @@ appId: com.tap_pay
 # All UI coordinates defined here - update in one place!
 env:
   # Test Data
-  NAME: Rabbiyaa
+  NAME: Robert Johnson
   MOBILE_NUMBER: "03205263174"
   
   # UI Locators (from locators.yaml)
@@ -54,19 +54,13 @@ env:
 - assertVisible: Enter PIN
 - tapOn:
     point: ${PIN_INPUT_FIELD_ENTER}
-- tapOn: "1"
-- tapOn: "2"
-- tapOn: "1"
-- tapOn: "2"
+- inputText: "1212"
 
 # Re-enter PIN
 - assertVisible: Re-enter PIN
 - tapOn:
     point: ${PIN_INPUT_FIELD_REENTER}
-- tapOn: "1"
-- tapOn: "2"
-- tapOn: "1"
-- tapOn: "2"
+- inputText: "1212"
 
 # Complete Registration
 - tapOn: Back

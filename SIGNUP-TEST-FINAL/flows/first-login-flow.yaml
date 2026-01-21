@@ -18,10 +18,7 @@ env:
 - assertVisible: Enter your Pin
 - tapOn:
     point: ${LOGIN_PIN_INPUT_FIELD}
-- tapOn: "1"
-- tapOn: "2"
-- tapOn: "1"
-- tapOn: "2"
+- inputText: "1212"
 
 # Accept Terms & Conditions
 - assertVisible: Read Before Proceeding
