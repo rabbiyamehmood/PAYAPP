@@ -2,8 +2,18 @@ appId: com.tap_pay
 ---
 # Enter Transaction Amount Flow
 # Parameters: AMOUNT (as individual digits)
-- tapOn: "${DIGIT_1}"
-- tapOn: "${DIGIT_2}"
-- tapOn: "${DIGIT_3}"
-- tapOn: "${DIGIT_4}"
-- tapOn: "CONFIRM"
+- tapOn:
+    text: "${DIGIT_1}"
+    waitToSettleTimeoutMs: 200
+- tapOn:
+    text: "${DIGIT_2}"
+    waitToSettleTimeoutMs: 200
+- tapOn:
+    text: "${DIGIT_3}"
+    waitToSettleTimeoutMs: 200
+- tapOn:
+    text: "${DIGIT_4}"
+    waitToSettleTimeoutMs: 200
+- tapOn:
+    text: "CONFIRM"
+    waitToSettleTimeoutMs: 1000

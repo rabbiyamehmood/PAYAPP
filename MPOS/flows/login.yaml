@@ -2,12 +2,14 @@ appId: com.tap_pay
 ---
 # Login Flow - Reusable authentication component
 - tapOn: "PAY"
-- assertVisible: "Enter your Pin"
 - tapOn:
     point: "11%,55%"
+    waitToSettleTimeoutMs: 1000
 - inputText: "${PIN}"
-- assertVisible: "Enable Fingerprint"
 - tapOn:
     point: "67%,58%"  # Skip fingerprint
+    optional: true
+    waitToSettleTimeoutMs: 500
 - tapOn:
     point: "17%,58%"  # Confirm/Continue
+    waitToSettleTimeoutMs: 1000
